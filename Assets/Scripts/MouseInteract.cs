@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
-using UnityEngine.SocialPlatforms.Impl;
 
 
 [RequireComponent(typeof(AudioSource))] // will add one of these to the thing the script is attached to
@@ -10,9 +8,10 @@ public class MouseInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     Color s_MouseOverColor = Color.softGreen;
     Color s_OriginalColor;
     SpriteRenderer s_Renderer;
+    private GameManager gameManager;
     
-    public TMP_Text scoreText;
-    private int score;
+    //public TMP_Text scoreText;
+    //private int score;
 
     public AudioSource sfx;
     
@@ -21,6 +20,7 @@ public class MouseInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         s_Renderer = GetComponent<SpriteRenderer>(); //grab sprite rendered component from object
         s_OriginalColor = s_Renderer.material.color; //grab og color of object
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     
     public void OnPointerEnter(PointerEventData p)
@@ -38,9 +38,10 @@ public class MouseInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerClick(PointerEventData p)
     {
         Debug.Log($"Clicked {gameObject.name}. Whoa!!");
-        sfx.Play();
+        //sfx.Play();
         Destroy(gameObject);
-        score++;
-        scoreText.text = score.ToString();
+        gameManager.UpdateScore(1);
+        //score++;
+        //scoreText.text = score.ToString();
     }
 }
