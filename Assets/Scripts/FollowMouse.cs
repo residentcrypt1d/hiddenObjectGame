@@ -12,7 +12,7 @@ public class FollowMouse : MonoBehaviour
     void Start()
     {
         Debug.Log("goodbye world... just a glimpse into my dark and *i am shot dead*");
-       // Cursor.visible = false;
+       Cursor.visible = false;
     }
 
     
