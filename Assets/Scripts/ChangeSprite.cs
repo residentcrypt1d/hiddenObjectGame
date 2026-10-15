@@ -5,6 +5,7 @@ public class ChangeSprite : MonoBehaviour, IPointerClickHandler // allows us to 
 {
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
+    public AudioSource sfx;
     
     void Start()
     {
@@ -14,6 +15,7 @@ public class ChangeSprite : MonoBehaviour, IPointerClickHandler // allows us to 
     public void OnPointerClick(PointerEventData p) 
     {
         spriteRenderer.sprite = newSprite;
+        sfx.Play();
     }
 
 }
