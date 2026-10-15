@@ -70,7 +70,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "2776c80d-3c14-4091-8c56-d04ced07a2b0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
@@ -99,17 +99,7 @@
                 {
                     "name": "LeftClick",
                     "type": "Button",
-                    "id": "c6f995ca-636b-4567-93cf-a008100da1fb",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "RightClick",
-                    "type": "Button",
-                    "id": "cff01dc5-c65b-48f3-b4e5-82841150ee71",
+                    "id": "4992e3f9-f27c-49bf-9048-3f9b37a38843",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -483,6 +473,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4e23fbe8-3e73-4bc8-8cf7-ae65b115ac4b",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4f4649ac-64a8-4a73-af11-b3faef356a4d",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -505,23 +506,12 @@
                 },
                 {
                     "name": "",
-                    "id": "4709be75-157b-42c2-ac48-d81f0a2c6621",
+                    "id": "55568670-b253-4f31-8bdb-bea13fe055c2",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "LeftClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dcecd96b-f30a-4604-93f9-435a2e352e27",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RightClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

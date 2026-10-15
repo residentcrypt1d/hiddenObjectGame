@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - HiddenObject
+  - RegularObject
+  - MiscObject
   layers:
   - Default
   - TransparentFX
