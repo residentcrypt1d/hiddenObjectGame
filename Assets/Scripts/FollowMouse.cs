@@ -11,7 +11,8 @@ public class FollowMouse : MonoBehaviour
     
     void Start()
     {
-        Cursor.visible = false;
+        Debug.Log("goodbye world... just a glimpse into my dark and *i am shot dead*");
+       // Cursor.visible = false;
     }
 
     
@@ -20,6 +21,5 @@ public class FollowMouse : MonoBehaviour
         positionTracker = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         //FOR PRECISE FOLLOW 
         transform.position = Vector2.SmoothDamp(transform.position, positionTracker, ref refPosition, trackingSpeed);
-     
     }
 }
