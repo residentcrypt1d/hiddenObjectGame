@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 
 [RequireComponent(typeof(AudioSource))] // will add one of these to the thing the script is attached to
@@ -39,5 +40,7 @@ public class MouseInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         Debug.Log($"Clicked {gameObject.name}. Whoa!!");
         sfx.Play();
         Destroy(gameObject);
+        score++;
+        scoreText.text = score.ToString();
     }
 }

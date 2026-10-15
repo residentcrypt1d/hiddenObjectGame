@@ -14,6 +14,7 @@ public class ChangeSprite : MonoBehaviour, IPointerClickHandler // allows us to 
         
     public void OnPointerClick(PointerEventData p) 
     {
+        Debug.Log($"Clicked {gameObject.name}. meow!!");
         spriteRenderer.sprite = newSprite;
         sfx.Play();
     }
