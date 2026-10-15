@@ -10,23 +10,22 @@ public class Banishment : MonoBehaviour
 
     void Start()
     {
-        //Fetch the sprite renderer component from the GameObject
-        s_Renderer = GetComponent<SpriteRenderer>();
-        //Fetch the original color of the GameObject
-        s_OriginalColor = s_Renderer.material.color;
+        Debug.Log("hello?????");
+        s_Renderer = GetComponent<SpriteRenderer>(); //Get the sprite renderer component from the GameObject
+        s_OriginalColor = s_Renderer.material.color;  //Get the original color of the GameObject
     }
 
 
-    void OnMouseOver() //object changes color when hovered over INT HEORY???
+    void OnMouseOver() //object changes color when hovered over IN THEORY???
     {
-        //GetComponent<Image>().color -= new Color(0f, 0f, 0f, 1f);
+        // GetComponent<Image>().color -= new Color(0f, 0f, 0f, 1f);
         Debug.Log("Mouse is over GameObject.");
         s_Renderer.material.color = s_MouseOverColor;
     }
 
     void OnMouseExit() //this changes the tint back to normal!
     {
-        //GetComponent<Image>().color += new Color(0f, 0f, 0f, 1f);
+        // GetComponent<Image>().color += new Color(0f, 0f, 0f, 1f);
         Debug.Log("Mouse is no longer on GameObject.");
         s_Renderer.material.color = s_OriginalColor;
     }
@@ -38,15 +37,14 @@ public class Banishment : MonoBehaviour
             GameObject[] HiddenObject;
             HiddenObject = GameObject.FindGameObjectsWithTag("HiddenObject");
             foreach (var i in HiddenObject)
-
                 Destroy(i);
         }
-        if (gameObject.CompareTag("HiddenObject"))
-        {
-            Destroy(gameObject);
-            // Destroy(gameObject.tag("HiddenObject"));
+        //if (gameObject.CompareTag("HiddenObject"))
+        //{
+//            Destroy(gameObject);
+            //Destroy(gameObject.tag("HiddenObject")); // okay nvm
 
-        }
+  //      }
 
     }
 }
